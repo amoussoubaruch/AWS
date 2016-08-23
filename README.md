@@ -27,8 +27,17 @@ $ man -k ^pv    #  liste des commandes disponibles pour les volumes physiques
 $ pvcreate /dev/xvdb        # Créer le volume physique 
 ```
 
-> Etape 1 : Créer un volume groupe
+> Etape 2 : Créer un volume groupe
 
 ```sh
 $ vgcreate mvg /dev/xvdb      # Créer le volume groupe de nom mvg
 ```
+
+> Etape 3 : Créer un volume logique 
+
+```sh
+$ lvcreate -n VolMapR -L 2g mvg      # Créer le VL
+$ lvdisplay                          # Pour vérifier
+```
+
+
