@@ -24,5 +24,11 @@ $ yum install lvm2    # installer le package permettant la création de volume
 
 ```sh
 $ man -k ^pv    #  liste des commandes disponibles pour les volumes physiques
-$ pvcreate /dev/xvda2        # Créer le volume physique 
+$ pvcreate /dev/xvdb        # Créer le volume physique 
+```
+
+> Etape 1 : Créer un volume groupe
+
+```sh
+$ vgcreate mvg /dev/xvdb      # Créer le volume groupe de nom mvg
 ```
