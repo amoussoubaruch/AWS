@@ -40,4 +40,10 @@ $ lvcreate -n VolMapR -L 2g mvg      # Créer le VL
 $ lvdisplay                          # Pour vérifier
 ```
 
+> Etape 4 : Monter un système de fichier sur cette partition
 
+```sh
+$ mkfs -t ext4 /dev/mvg/VolMapR 
+$ mount /dev/mvg/VolMapR /opt/mapr
+$ df -h
+```
