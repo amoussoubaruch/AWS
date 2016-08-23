@@ -24,5 +24,5 @@ $ yum install lvm2    # installer le package permettant la création de volume
 
 ```sh
 $ man -k ^pv    #  liste des commandes disponibles pour les volumes physiques
-$ 
+$ pvcreate /dev/xvda2        # Créer le volume physique 
 ```
