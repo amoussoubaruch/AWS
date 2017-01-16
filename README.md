@@ -47,3 +47,12 @@ $ mkfs -t ext4 /dev/mvg/VolMapR
 $ mount /dev/mvg/VolMapR /opt/mapr
 $ df -h
 ```
+
+
+> Resolution du problème de vue Ambari : Créer pour chaque utilisateur un repertoire associé dans hdfs 
+
+```sh 
+$ sudo -u hdfs 
+$ hdfs dfs  -mkdir /user/admin
+$ hdfs dfs  -chown admin:hadoop /user/admin
+```
